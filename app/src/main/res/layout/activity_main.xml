@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_dos">
+
+        <TextView
+            android:id="@+id/tbn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EFEFEF"
+            android:padding="8dp"
+            android:text="Text"
+            android:textSize="18dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <TextView
+            android:id="@+id/tbn_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EFEFEF"
+            android:padding="8dp"
+            android:text="Image"
+            android:textSize="18dp"
+            app:layout_constraintStart_toEndOf="@id/tbn_text"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tbn_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EFEFEF"
+            android:padding="8dp"
+            android:text="Date"
+            android:textSize="18dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tbn_image"
+             />
+
+        <TextView
+            android:id="@+id/tbn_barcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#EFEFEF"
+            android:padding="8dp"
+            android:text="Barcode"
+            android:textSize="18dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tbn_date"
+             />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="96dp">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="348dp"
+            android:layout_height="530dp"
+            android:layout_marginTop="16dp"
+            android:background="#CCC8C8"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.236"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previsualizar"
+            tools:layout_editor_absoluteX="112dp"
+            tools:layout_editor_absoluteY="598dp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Limpiar"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="598dp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Imprimir"
+            tools:layout_editor_absoluteX="230dp"
+            tools:layout_editor_absoluteY="598dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
