@@ -33,7 +33,13 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
+
+
 
 dependencies {
     val fragment_version = "1.7.1"

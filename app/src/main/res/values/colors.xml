@@ -3,5 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="color_one">#555555</color>
-    <color name="color_dos">#4CB34C</color>
+    <color name="color_dos">#F57F17</color>
+    <color name="toolbarB">#1B5E20</color>
 </resources>

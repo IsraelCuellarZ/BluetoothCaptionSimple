@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/item_Conect_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:showAsAction="ifRoom"
+        android:title="Conectar_Indicator"
+        android:icon="@drawable/bluetooth_connected_faile"/>
+    <item
+        android:id="@+id/item_Conect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Conectar" />
+    <item
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Abrir               *PRO" />
+    <item
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Guardar         *PRO" />
+    <item
+        android:id="@+id/item_closed_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Salir" />
+</menu>

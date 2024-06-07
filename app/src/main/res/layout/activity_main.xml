@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/toolbarB"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="@color/toolbarB"
+    android:theme="@style/Widget.MaterialComponents.BottomAppBar"
+    />
+
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,10 +29,12 @@
             android:layout_height="wrap_content"
             android:background="#EFEFEF"
             android:padding="8dp"
-            android:text="Text"
-            android:textSize="18dp"
+            android:text="Texto"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
+            android:clickable="true"
+            android:focusable="true" />
 
         <TextView
             android:id="@+id/tbn_image"
@@ -29,23 +42,14 @@
             android:layout_height="wrap_content"
             android:background="#EFEFEF"
             android:padding="8dp"
-            android:text="Image"
-            android:textSize="18dp"
-            app:layout_constraintStart_toEndOf="@id/tbn_text"
+            android:text="Imagen"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/tbn_text"
             app:layout_constraintTop_toTopOf="parent"
-            />
+            android:clickable="true"
+            android:focusable="true" />
 
-        <TextView
-            android:id="@+id/tbn_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#EFEFEF"
-            android:padding="8dp"
-            android:text="Date"
-            android:textSize="18dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tbn_image"
-             />
+
 
         <TextView
             android:id="@+id/tbn_barcode"
@@ -54,11 +58,11 @@
             android:background="#EFEFEF"
             android:padding="8dp"
             android:text="Barcode"
-            android:textSize="18dp"
+            android:textSize="20dp"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toEndOf="@id/tbn_date"
-             />
-
+            app:layout_constraintStart_toEndOf="@id/tbn_image"
+            android:clickable="true"
+            android:focusable="true" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -68,43 +72,39 @@
         android:layout_height="match_parent"
         tools:layout_editor_absoluteY="96dp">
 
-
-        <TextView
-            android:id="@+id/textView"
+        <View
+            android:id="@+id/block_content"
             android:layout_width="348dp"
             android:layout_height="530dp"
             android:layout_marginTop="16dp"
             android:background="#CCC8C8"
-            android:text="TextView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.236"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Previsualizar"
-            tools:layout_editor_absoluteX="112dp"
-            tools:layout_editor_absoluteY="598dp" />
-
-        <Button
-            android:id="@+id/button2"
+            android:id="@+id/btn_limpiar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:text="Limpiar"
+            android:padding="@dimen/default_size"
+            android:text="@string/limpiar"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="598dp" />
+            app:layout_constraintEnd_toStartOf="@id/btn_printer"
+            app:layout_constraintTop_toBottomOf="@id/block_content" />
+
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btn_printer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Imprimir"
-            tools:layout_editor_absoluteX="230dp"
-            tools:layout_editor_absoluteY="598dp" />
+            android:padding="@dimen/default_size"
+            android:text="@string/imprimir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_limpiar"
+            app:layout_constraintTop_toBottomOf="@id/block_content" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
